@@ -14,30 +14,20 @@
 import sys
 import numpy
 
-def dfs(adj, used, order, x):
-    #write your code here
-    pass
-
-
 def toposort(adj):
-    # used = [0] * len(adj)
     order = []
-    #write your code here
 
     for v in range(0, len(adj)):
         if not visited[v]:
             explore(v, order)
 
-    # print(post.sort())
-    # print(post)
     order.reverse()
 
     return order
 
 
 def explore(v, order):
-    # print('v: ', v)
-    # print('clock: ', clock)
+
     visited[v] = 1
     for w in adj[v]:
         if not visited[w]:
